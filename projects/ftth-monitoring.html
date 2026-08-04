@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTTH Network Monitoring with GIS — Saiful Adi Putra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com">
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+    <script src="../assets/navbar.js"></script>
+
+    <section class="detail-hero">
+        <div class="wrap">
+            <a class="back-link" href="../projects.html">← Back to projects</a>
+            <div class="eyebrow">Undergraduate Thesis</div>
+            <h1 class="detail-title">FTTH Network Monitoring System with GIS Integration</h1>
+            <div class="detail-meta">
+                <div class="item">
+                    <div class="label mono">Year</div>
+                    <div class="value">2026</div>
+                </div>
+                <div class="item">
+                    <div class="label mono">Role</div>
+                    <div class="value">Backend &amp; Systems Developer</div>
+                </div>
+                <div class="item">
+                    <div class="label mono">Stack</div>
+                    <div class="value">Golang, ReactJS, Leaflet.js, Zabbix, SNMP, PostgreSQL, AWS, WireGuard, Docker</div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/Projects/FTTH/Picture1.png" alt="FTTH Network Monitoring Dashboard Preview">
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top:0;">
+        <div class="wrap">
+            <div class="detail-body">
+                <div>
+                    <h3>Overview</h3>
+                    <p>A real-time monitoring system for a Fiber-to-the-Home (FTTH) network, built for an internet
+                        service provider (AFF NET). The system integrates SNMP polling with a Geographic Information
+                        System so that field devices can be tracked both by status and by physical location.</p>
+
+                    <h3>The challenge</h3>
+                    <ul>
+                        <li>The ISP's fiber devices were scattered across a wide geographic area with no unified,
+                            real-time view of their operational status.</li>
+                        <li>Faults were discovered late, usually after customers reported outages rather than through
+                            proactive detection.</li>
+                    </ul>
+
+                    <h3>The approach</h3>
+                    <ul>
+                        <li>Built backend services in Golang to collect, process, and synchronize monitoring data pulled
+                            from Zabbix.</li>
+                        <li>Developed an interactive web dashboard with ReactJS and Leaflet.js to visualize devices and
+                            their status on a live map.</li>
+                        <li>Implemented automated Telegram notifications so the operations team is alerted the moment a
+                            fault occurs.</li>
+                        <li>Deployed on AWS EC2, tunnelling cloud infrastructure to the on-premises network with
+                            WireGuard VPN.</li>
+                    </ul>
+
+                    <h3>The result</h3>
+                    <ul>
+                        <li>A single real-time dashboard replaced manual, reactive fault checking.</li>
+                        <li>Faster troubleshooting through instant Telegram alerts tied to exact device locations.</li>
+                        <li>A secure, low-latency bridge between cloud and on-premises infrastructure via WireGuard.</li>
+                    </ul>
+
+                    <h3>Gallery &amp; System Architecture</h3>
+                    <div class="gallery-grid" style="grid-template-columns: repeat(2, 1fr);">
+                        <img src="../assets/Projects/FTTH/Picture1.png" alt="FTTH Dashboard Preview">
+                        <img src="../assets/Projects/FTTH/Picture2.png" alt="FTTH Device Map">
+                        <img src="../assets/Projects/FTTH/Picture3.png" alt="FTTH Monitoring Status">
+                        <img src="../assets/Projects/FTTH/Picture4.png" alt="FTTH Alert System">
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <div class="label mono" style="margin-bottom: 8px; font-size: 11px; color: var(--ink-faint);">System Architecture Diagram</div>
+                        <img src="../assets/Projects/FTTH/Arsitektur Sistem.drawio.png" alt="FTTH System Architecture" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--line); background: #ffffff;">
+                    </div>
+                </div>
+
+                <div class="meta-panel">
+                    <div class="block">
+                        <div class="label mono">Tech stack</div>
+                        <div class="tag-row">
+                            <span>Golang</span><span>ReactJS</span><span>Leaflet.js</span><span>Zabbix</span><span>SNMP</span><span>PostgreSQL</span><span>AWS</span><span>WireGuard</span><span>Docker</span>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="label mono">Category</div>
+                        <div class="value" style="font-size:0.88rem; font-weight:600;">Undergraduate Thesis</div>
+                    </div>
+                    <div class="block">
+                        <div class="label mono">Links</div>
+                        <a href="https://github.com/prpleehyyth" target="_blank"
+                            style="font-size:0.88rem; font-weight:600;">GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <a class="next-project" href="routerush.html">
+                <div>
+                    <div class="label mono">Next project</div>
+                    <div class="title">RouteRush</div>
+                </div>
+                <div class="arrow-badge" style="background:var(--ink); color:var(--cream);">↗</div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="foot-top">
+            <div>
+                <h2>Let's build the next system together.</h2>
+                <div class="email mono">saifuladi0507@gmail.com</div>
+            </div>
+            <div class="foot-links">
+                <a href="https://github.com/prpleehyyth" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/saifuladiiptra" target="_blank">LinkedIn</a>
+                <a href="mailto:saifuladi0507@gmail.com">Email</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>© 2026 Saiful Adi Putra</span>
+            <span>Surabaya, East Java, Indonesia</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
