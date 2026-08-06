@@ -807,7 +807,9 @@
                 <!-- Dicoding & Coursera Certificates Horizontal Scroll Slider -->
                 <div style="margin-top: 28px;">
                     <div class="eyebrow" style="margin-bottom: 12px;">Dicoding &amp; Coursera Certificates</div>
-                    <div class="dicoding-scroll-wrapper">
+                    <div class="scroll-section-container">
+                        <button class="section-nav-btn prev" onclick="scrollSection('dicodingWrapper', -340)" aria-label="Scroll Left">‹</button>
+                        <div class="dicoding-scroll-wrapper" id="dicodingWrapper">
                         <div class="dicoding-scroll-track">
                             <!-- Set 1 -->
                             <div class="dicoding-card">
@@ -1125,50 +1127,56 @@
                             </div>
                         </div>
                     </div>
+                    <button class="section-nav-btn next" onclick="scrollSection('dicodingWrapper', 340)" aria-label="Scroll Right">›</button>
+                </div>
                 </div>
 
                 <!-- Credly Verified Badges -->
                 <div style="margin-top: 40px;">
                     <div class="eyebrow" style="margin-bottom: 16px;">Verified Badges</div>
-                    <div class="badges-scroll-wrapper">
-                        <div class="badges-scroll-track">
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="0ff4f8e0-6888-4fdf-b809-1ec35eb73339"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="ce654bd7-9d8a-4d3e-926b-c48ae5d30c7e"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="cc33e9c0-b2be-453b-b2a0-af1da72b5ec2"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="1786d104-e05e-4e33-bee3-0c9c4797a310"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="0082acee-cb79-4131-9454-7a536b4a4115"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="5dee53f3-d159-44df-ada9-d2a3848ce084"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="360fe358-1dbb-4d6c-913d-4fba51b09d4c"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="6a84fd9f-1b11-4852-98a6-b8aa750eef00"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="638d601c-ea61-4d17-b61f-1e49ded1e561"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="563e42b9-bad9-4459-bfad-cde163d1f997"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="4b32c4fd-20f7-40f9-b868-68c1a85b0c4b"
-                                data-share-badge-host="https://www.credly.com"></div>
-                            <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
-                                data-share-badge-id="4cdeecdf-9d9d-4a8c-aea8-505b7c19d785"
-                                data-share-badge-host="https://www.credly.com"></div>
+                    <div class="scroll-section-container">
+                        <button class="section-nav-btn prev" onclick="scrollSection('badgesWrapper', -340)" aria-label="Scroll Left">‹</button>
+                        <div class="badges-scroll-wrapper" id="badgesWrapper">
+                            <div class="badges-scroll-track">
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="0ff4f8e0-6888-4fdf-b809-1ec35eb73339"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="ce654bd7-9d8a-4d3e-926b-c48ae5d30c7e"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="cc33e9c0-b2be-453b-b2a0-af1da72b5ec2"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="1786d104-e05e-4e33-bee3-0c9c4797a310"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="0082acee-cb79-4131-9454-7a536b4a4115"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="5dee53f3-d159-44df-ada9-d2a3848ce084"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="360fe358-1dbb-4d6c-913d-4fba51b09d4c"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="6a84fd9f-1b11-4852-98a6-b8aa750eef00"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="638d601c-ea61-4d17-b61f-1e49ded1e561"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="563e42b9-bad9-4459-bfad-cde163d1f997"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="4b32c4fd-20f7-40f9-b868-68c1a85b0c4b"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
+                                    data-share-badge-id="4cdeecdf-9d9d-4a8c-aea8-505b7c19d785"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                            </div>
                         </div>
+                        <button class="section-nav-btn next" onclick="scrollSection('badgesWrapper', 340)" aria-label="Scroll Right">›</button>
                     </div>
                     <script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
                 </div>
@@ -1350,110 +1358,114 @@
             <div class="resume-section">
                 <div class="resume-section-title">Other Experiences</div>
 
-                <div class="other-exp-scroll-wrapper">
-                    <div class="other-exp-scroll-track">
-                        <!-- Set 1 -->
-                        <div class="other-exp-card">
-                            <img src="assets/Other Experiences/HOK.jpeg" alt="Honor Of Kings Campus Series S2"
-                                class="other-exp-img">
-                            <div>
-                                <div class="other-exp-card-header">
-                                    <h3 class="other-exp-card-title">Honor Of Kings Campus Series S2</h3>
-                                    <span class="other-exp-card-date">2025</span>
+                <div class="scroll-section-container">
+                    <button class="section-nav-btn prev" onclick="scrollSection('otherExpWrapper', -340)" aria-label="Scroll Left">‹</button>
+                    <div class="other-exp-scroll-wrapper" id="otherExpWrapper">
+                        <div class="other-exp-scroll-track">
+                            <!-- Set 1 -->
+                            <div class="other-exp-card">
+                                <img src="assets/Other Experiences/HOK.jpeg" alt="Honor Of Kings Campus Series S2"
+                                    class="other-exp-img">
+                                <div>
+                                    <div class="other-exp-card-header">
+                                        <h3 class="other-exp-card-title">Honor Of Kings Campus Series S2</h3>
+                                        <span class="other-exp-card-date">2025</span>
+                                    </div>
+                                    <p class="other-exp-card-sub" style="margin-top: 6px;">UPN Veteran Jawa Timur — Champion
+                                    </p>
                                 </div>
-                                <p class="other-exp-card-sub" style="margin-top: 6px;">UPN Veteran Jawa Timur — Champion
-                                </p>
                             </div>
-                        </div>
 
-                        <div class="other-exp-card">
-                            <img src="assets/Other Experiences/First Meet.jpeg" alt="First Meet UKM Veteran Esport"
-                                class="other-exp-img">
-                            <div>
-                                <div class="other-exp-card-header">
-                                    <h3 class="other-exp-card-title">First Meet</h3>
-                                    <span class="other-exp-card-date">2024</span>
+                            <div class="other-exp-card">
+                                <img src="assets/Other Experiences/First Meet.jpeg" alt="First Meet UKM Veteran Esport"
+                                    class="other-exp-img">
+                                <div>
+                                    <div class="other-exp-card-header">
+                                        <h3 class="other-exp-card-title">First Meet</h3>
+                                        <span class="other-exp-card-date">2024</span>
+                                    </div>
+                                    <p class="other-exp-card-sub" style="margin-top: 6px;">UKM Veteran Esport — Publication
+                                        &amp; Design</p>
                                 </div>
-                                <p class="other-exp-card-sub" style="margin-top: 6px;">UKM Veteran Esport — Publication
-                                    &amp; Design</p>
                             </div>
-                        </div>
 
-                        <div class="other-exp-card">
-                            <img src="assets/Other Experiences/Petra.jpeg" alt="Petra Mengajar" class="other-exp-img">
-                            <div>
-                                <div class="other-exp-card-header">
-                                    <h3 class="other-exp-card-title">Petra Mengajar</h3>
-                                    <span class="other-exp-card-date">2023</span>
+                            <div class="other-exp-card">
+                                <img src="assets/Other Experiences/Petra.jpeg" alt="Petra Mengajar" class="other-exp-img">
+                                <div>
+                                    <div class="other-exp-card-header">
+                                        <h3 class="other-exp-card-title">Petra Mengajar</h3>
+                                        <span class="other-exp-card-date">2023</span>
+                                    </div>
+                                    <p class="other-exp-card-sub" style="margin-top: 6px;">Petra Christian University with
+                                        YISB — Team Leader</p>
                                 </div>
-                                <p class="other-exp-card-sub" style="margin-top: 6px;">Petra Christian University with
-                                    YISB — Team Leader</p>
                             </div>
-                        </div>
 
-                        <div class="other-exp-card">
-                            <img src="assets/Other Experiences/Mosaik.jpeg" alt="MOSAIK 2023" class="other-exp-img">
-                            <div>
-                                <div class="other-exp-card-header">
-                                    <h3 class="other-exp-card-title">MOSAIK 2023</h3>
-                                    <span class="other-exp-card-date">2023</span>
+                            <div class="other-exp-card">
+                                <img src="assets/Other Experiences/Mosaik.jpeg" alt="MOSAIK 2023" class="other-exp-img">
+                                <div>
+                                    <div class="other-exp-card-header">
+                                        <h3 class="other-exp-card-title">MOSAIK 2023</h3>
+                                        <span class="other-exp-card-date">2023</span>
+                                    </div>
+                                    <p class="other-exp-card-sub" style="margin-top: 6px;">BEM Fasilkom UPN Veteran Jatim —
+                                        Liaison Officer</p>
                                 </div>
-                                <p class="other-exp-card-sub" style="margin-top: 6px;">BEM Fasilkom UPN Veteran Jatim —
-                                    Liaison Officer</p>
                             </div>
-                        </div>
 
-                        <!-- Set 2 (for seamless loop) -->
-                        <div class="other-exp-card">
-                            <img src="assets/Other Experiences/HOK.jpeg" alt="Honor Of Kings Campus Series S2"
-                                class="other-exp-img">
-                            <div>
-                                <div class="other-exp-card-header">
-                                    <h3 class="other-exp-card-title">Honor Of Kings Campus Series S2</h3>
-                                    <span class="other-exp-card-date">2025</span>
+                            <!-- Set 2 (for seamless loop) -->
+                            <div class="other-exp-card">
+                                <img src="assets/Other Experiences/HOK.jpeg" alt="Honor Of Kings Campus Series S2"
+                                    class="other-exp-img">
+                                <div>
+                                    <div class="other-exp-card-header">
+                                        <h3 class="other-exp-card-title">Honor Of Kings Campus Series S2</h3>
+                                        <span class="other-exp-card-date">2025</span>
+                                    </div>
+                                    <p class="other-exp-card-sub" style="margin-top: 6px;">UPN Veteran Jawa Timur — Champion
+                                    </p>
                                 </div>
-                                <p class="other-exp-card-sub" style="margin-top: 6px;">UPN Veteran Jawa Timur — Champion
-                                </p>
                             </div>
-                        </div>
 
-                        <div class="other-exp-card">
-                            <img src="assets/Other Experiences/First Meet.jpeg" alt="First Meet UKM Veteran Esport"
-                                class="other-exp-img">
-                            <div>
-                                <div class="other-exp-card-header">
-                                    <h3 class="other-exp-card-title">First Meet</h3>
-                                    <span class="other-exp-card-date">2024</span>
+                            <div class="other-exp-card">
+                                <img src="assets/Other Experiences/First Meet.jpeg" alt="First Meet UKM Veteran Esport"
+                                    class="other-exp-img">
+                                <div>
+                                    <div class="other-exp-card-header">
+                                        <h3 class="other-exp-card-title">First Meet</h3>
+                                        <span class="other-exp-card-date">2024</span>
+                                    </div>
+                                    <p class="other-exp-card-sub" style="margin-top: 6px;">UKM Veteran Esport — Publication
+                                        &amp; Design</p>
                                 </div>
-                                <p class="other-exp-card-sub" style="margin-top: 6px;">UKM Veteran Esport — Publication
-                                    &amp; Design</p>
                             </div>
-                        </div>
 
-                        <div class="other-exp-card">
-                            <img src="assets/Other Experiences/Petra.jpeg" alt="Petra Mengajar" class="other-exp-img">
-                            <div>
-                                <div class="other-exp-card-header">
-                                    <h3 class="other-exp-card-title">Petra Mengajar</h3>
-                                    <span class="other-exp-card-date">2023</span>
+                            <div class="other-exp-card">
+                                <img src="assets/Other Experiences/Petra.jpeg" alt="Petra Mengajar" class="other-exp-img">
+                                <div>
+                                    <div class="other-exp-card-header">
+                                        <h3 class="other-exp-card-title">Petra Mengajar</h3>
+                                        <span class="other-exp-card-date">2023</span>
+                                    </div>
+                                    <p class="other-exp-card-sub" style="margin-top: 6px;">Petra Christian University with
+                                        YISB — Team Leader</p>
                                 </div>
-                                <p class="other-exp-card-sub" style="margin-top: 6px;">Petra Christian University with
-                                    YISB — Team Leader</p>
                             </div>
-                        </div>
 
-                        <div class="other-exp-card">
-                            <img src="assets/Other Experiences/Mosaik.jpeg" alt="MOSAIK 2023" class="other-exp-img">
-                            <div>
-                                <div class="other-exp-card-header">
-                                    <h3 class="other-exp-card-title">MOSAIK 2023</h3>
-                                    <span class="other-exp-card-date">2023</span>
+                            <div class="other-exp-card">
+                                <img src="assets/Other Experiences/Mosaik.jpeg" alt="MOSAIK 2023" class="other-exp-img">
+                                <div>
+                                    <div class="other-exp-card-header">
+                                        <h3 class="other-exp-card-title">MOSAIK 2023</h3>
+                                        <span class="other-exp-card-date">2023</span>
+                                    </div>
+                                    <p class="other-exp-card-sub" style="margin-top: 6px;">BEM Fasilkom UPN Veteran Jatim —
+                                        Liaison Officer</p>
                                 </div>
-                                <p class="other-exp-card-sub" style="margin-top: 6px;">BEM Fasilkom UPN Veteran Jatim —
-                                    Liaison Officer</p>
                             </div>
                         </div>
                     </div>
+                    <button class="section-nav-btn next" onclick="scrollSection('otherExpWrapper', 340)" aria-label="Scroll Right">›</button>
                 </div>
             </div>
     </section>
@@ -1472,6 +1484,17 @@
         </div>
         <div class="copyright"><span>© 2026 Saiful Adi Putra</span><span>Surabaya, East Java, Indonesia</span></div>
     </footer>
+    <script>
+        function scrollSection(wrapperId, amount) {
+            var wrapper = document.getElementById(wrapperId);
+            if (!wrapper) return;
+            var track = wrapper.querySelector('[class*="-scroll-track"]');
+            if (track) {
+                track.style.animationPlayState = 'paused';
+            }
+            wrapper.scrollBy({ left: amount, behavior: 'smooth' });
+        }
+    </script>
 </body>
 
 </html>

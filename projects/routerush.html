@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.cdnfonts.com">
     <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 
@@ -35,8 +37,22 @@
                     <div class="value">Node.js, MySQL, Google Cloud Platform, Docker, Cloud Build, Cloud Run</div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="../assets/Projects/RouteRush/Arsitektur.jpg" alt="RouteRush Cloud Architecture Diagram">
+            <div class="detail-slider">
+                <button class="slider-btn prev-btn" aria-label="Previous photo">‹</button>
+                <div class="slider-track">
+                    <div class="slide-item">
+                        <img src="../assets/Projects/RouteRush/Arsitektur.jpg"
+                            alt="RouteRush Cloud Architecture Diagram">
+                    </div>
+                    <div class="slide-item">
+                        <img src="../assets/Projects/RouteRush/1.jpeg" alt="RouteRush Cloud Architecture Diagram">
+                    </div>
+                    <div class="slide-item">
+                        <img src="../assets/Projects/RouteRush/2.jpeg" alt="RouteRush Cloud Architecture Diagram">
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" aria-label="Next photo">›</button>
+                <div class="slider-dots"></div>
             </div>
         </div>
     </section>
@@ -54,7 +70,8 @@
                     <ul>
                         <li>Delivery drivers with multiple stops needed a way to sequence routes efficiently to save
                             time and fuel.</li>
-                        <li>The mobile app needed a reliable, scalable backend to serve ML-driven route recommendations.</li>
+                        <li>The mobile app needed a reliable, scalable backend to serve ML-driven route recommendations.
+                        </li>
                     </ul>
 
                     <h3>The approach</h3>
@@ -63,29 +80,27 @@
                             services and the ML inference service.</li>
                         <li>Deployed containerized backend services on Google Cloud Run for scalable, serverless
                             hosting.</li>
-                        <li>Set up a CI/CD pipeline with Google Cloud Build to automate image builds and deployments.</li>
+                        <li>Set up a CI/CD pipeline with Google Cloud Build to automate image builds and deployments.
+                        </li>
                         <li>Integrated Cloud SQL, Cloud Storage, and Artifact Registry to support the backend
                             infrastructure.</li>
                     </ul>
 
                     <h3>The result</h3>
                     <ul>
-                        <li>A working end-to-end pipeline from mobile app to ML inference to optimized route output.</li>
+                        <li>A working end-to-end pipeline from mobile app to ML inference to optimized route output.
+                        </li>
                         <li>Serverless deployment that scales automatically with demand.</li>
                         <li>Automated deployments that removed manual release steps for the team.</li>
                     </ul>
-
-                    <h3>System Architecture</h3>
-                    <div style="margin-top: 16px;">
-                        <img src="../assets/Projects/RouteRush/Arsitektur.jpg" alt="RouteRush Cloud Architecture" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--line); background: #ffffff;">
-                    </div>
                 </div>
 
                 <div class="meta-panel">
                     <div class="block">
                         <div class="label mono">Tech stack</div>
                         <div class="tag-row">
-                            <span>Node.js</span><span>MySQL</span><span>GCP</span><span>Docker</span><span>Cloud Build</span><span>Cloud Run</span>
+                            <span>Node.js</span><span>MySQL</span><span>GCP</span><span>Docker</span><span>Cloud
+                                Build</span><span>Cloud Run</span>
                         </div>
                     </div>
                     <div class="block">
@@ -100,10 +115,10 @@
                 </div>
             </div>
 
-            <a class="next-project" href="umkm-sutorejo.html">
+            <a class="next-project" href="ftth-monitoring.html">
                 <div>
                     <div class="label mono">Next project</div>
-                    <div class="title">UMKM Sutorejo</div>
+                    <div class="title">FTTH Network Monitoring with GIS</div>
                 </div>
                 <div class="arrow-badge" style="background:var(--ink); color:var(--cream);">↗</div>
             </a>

@@ -38,12 +38,15 @@
                 <div class="cell cell-badges">
                     <div class="badges-card-top">
                         <div class="eyebrow mono" style="margin-bottom:0;">Verified Badges</div>
-                        <a class="mono" href="resume.html#certifications"
-                            style="font-size: 11px; color: var(--ink-soft); text-decoration: underline;">All Badges
-                            ↗</a>
+                        <a class="badges-all-btn mono" href="resume.html#certifications">
+                            <span>All Badges</span>
+                            <span class="badge-arrow">↗</span>
+                        </a>
                     </div>
 
                     <div class="credly-rotator-stage">
+                        <button id="badgePrevBtn" class="rotator-arrow-btn prev" aria-label="Previous badge">‹</button>
+                        <button id="badgeNextBtn" class="rotator-arrow-btn next" aria-label="Next badge">›</button>
                         <div class="credly-slide is-active">
                             <div class="badge-item" data-iframe-width="150" data-iframe-height="270"
                                 data-share-badge-id="0ff4f8e0-6888-4fdf-b809-1ec35eb73339"
@@ -182,6 +185,8 @@
         (function () {
             var slides = document.querySelectorAll('.credly-slide');
             var dotsContainer = document.getElementById('badgeDots');
+            var prevBtn = document.getElementById('badgePrevBtn');
+            var nextBtn = document.getElementById('badgeNextBtn');
             if (!slides.length) return;
 
             var currentIndex = 0;
@@ -198,6 +203,9 @@
             });
 
             function goToSlide(index) {
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+
                 slides.forEach(function (s, i) {
                     s.classList.toggle('is-active', i === index);
                 });
@@ -212,8 +220,25 @@
             }
 
             function nextSlide() {
-                var nextIdx = (currentIndex + 1) % slides.length;
-                goToSlide(nextIdx);
+                goToSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    prevSlide();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    nextSlide();
+                });
             }
 
             function startTimer() {

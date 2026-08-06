@@ -31,7 +31,7 @@
 
     var navHtml = '<nav>\n' +
         '        <div class="wrap">\n' +
-        '            <a class="logo" href="' + prefix + 'index.html">SAIFUL<span>.</span>ADI PUTRA</a>\n' +
+        '            <a class="logo" href="' + prefix + '/">SAIFUL<span>.</span>ADI PUTRA</a>\n' +
         '            <div class="nav-links">\n' +
         '                ' + linksHtml + '\n' +
         '            </div>\n' +
@@ -51,10 +51,10 @@
         var modalHtml = '<div id="imgLightboxModal" class="img-lightbox-modal" role="dialog" aria-modal="true">' +
             '<button id="imgLightboxClose" class="img-lightbox-close" aria-label="Close">✕</button>' +
             '<div class="img-lightbox-content">' +
-                '<img id="imgLightboxSrc" src="" alt="Full view">' +
-                '<div id="imgLightboxCaption" class="img-lightbox-caption"></div>' +
+            '<img id="imgLightboxSrc" src="" alt="Full view">' +
+            '<div id="imgLightboxCaption" class="img-lightbox-caption"></div>' +
             '</div>' +
-        '</div>';
+            '</div>';
 
         document.body.insertAdjacentHTML('beforeend', modalHtml);
 
@@ -97,7 +97,7 @@
             }
         });
 
-        // Delegate click event for cert images, experience images, and project previews
+        // Delegate click event for cert images, experience images, project previews & slider slides
         document.body.addEventListener('click', function (e) {
             var target = e.target;
             if (target.tagName === 'IMG' && (
@@ -106,6 +106,8 @@
                 target.classList.contains('other-exp-img') ||
                 target.closest('.hero-image') ||
                 target.closest('.gallery-grid') ||
+                target.closest('.slide-item') ||
+                target.closest('.project-card-image') ||
                 target.classList.contains('lightbox-trigger')
             )) {
                 var caption = target.getAttribute('alt') || target.title || '';
@@ -118,5 +120,88 @@
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
+    }
+})();
+
+/**
+ * Universal Project Detail Image Slider Component Handler
+ */
+(function setupDetailSlider() {
+    function initSlider() {
+        var sliders = document.querySelectorAll('.detail-slider');
+        sliders.forEach(function (slider) {
+            var track = slider.querySelector('.slider-track');
+            var prevBtn = slider.querySelector('.prev-btn');
+            var nextBtn = slider.querySelector('.next-btn');
+            var dotsContainer = slider.querySelector('.slider-dots');
+            if (!track) return;
+
+            var slides = track.querySelectorAll('.slide-item');
+            if (slides.length <= 1) {
+                if (prevBtn) prevBtn.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+                if (dotsContainer) dotsContainer.style.display = 'none';
+                return;
+            }
+
+            // Create dots
+            if (dotsContainer) {
+                dotsContainer.innerHTML = '';
+                slides.forEach(function (_, idx) {
+                    var dot = document.createElement('div');
+                    dot.className = 'slider-dot' + (idx === 0 ? ' is-active' : '');
+                    dot.addEventListener('click', function () {
+                        goToSlide(idx);
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+            }
+
+            function goToSlide(index) {
+                var targetSlide = slides[index];
+                if (targetSlide) {
+                    track.scrollTo({
+                        left: targetSlide.offsetLeft,
+                        behavior: 'smooth'
+                    });
+                    updateDots(index);
+                }
+            }
+
+            function updateDots(activeIndex) {
+                if (!dotsContainer) return;
+                var dots = dotsContainer.querySelectorAll('.slider-dot');
+                dots.forEach(function (d, i) {
+                    d.classList.toggle('is-active', i === activeIndex);
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function () {
+                    var slideWidth = slides[0].offsetWidth;
+                    track.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function () {
+                    var slideWidth = slides[0].offsetWidth;
+                    track.scrollBy({ left: slideWidth, behavior: 'smooth' });
+                });
+            }
+
+            // Listen to scroll to update dots
+            track.addEventListener('scroll', function () {
+                var slideWidth = slides[0].offsetWidth;
+                var currentIdx = Math.round(track.scrollLeft / slideWidth);
+                updateDots(currentIdx);
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSlider);
+    } else {
+        initSlider();
     }
 })();
